@@ -5001,7 +5001,7 @@ f_type, uint8_t f_index, char *f_string)
 	else {
 		printf("String size are not equal, resizing fru to fit new string\n");
 		if(
-				ipmi_fru_set_field_string_rebuild(intf,fruId,fru,header,f_type,f_index,f_string)
+				ipmi_fru_set_field_string_rebuild(intf,fruId,fru,header,f_type,f_index,f_string) != 1
 		)
 		{
 			rc = -1;
